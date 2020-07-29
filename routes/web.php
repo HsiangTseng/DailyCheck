@@ -20,7 +20,6 @@ Route::get('/', function () {
 
 Route::get('/Home', function () {
     return view('dashboard.frontend.Home');
-
 });
 
 Route::get('/workspace', function () {
@@ -37,10 +36,7 @@ Route::get('/WrongUser', function () {
     return view('dashboard.frontend.wronguser');
 
 });
-
-
 Route::post('/check_login', 'UserController@check_account');
-Route::get('/check_api', 'StockController@index');
-Route::get('CheckPrice/{name?}', function ($name = null) {
-    return $name;
-});
+
+//-------------Function or Ajax-------------
+Route::post('/PostGetPrice', 'StockController@index');

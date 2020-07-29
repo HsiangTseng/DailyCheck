@@ -13,9 +13,11 @@ class StockController extends Controller
      */
     public function index()
     {
-        //return '123';
+        $stock_number = $_POST['stock_number'];
+        $stock_code = 'tse_'.$stock_number.'.tw_'.date("Ymd");
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw_20200727&_=CURRENT_TIME',['verify' => false]);
+        //Stock URL ==>> 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw_20200729&_=CURRENT_TIME'
+        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch='.$stock_code.'&_=CURRENT_TIME',['verify' => false]);
 
         //echo $response->getStatusCode().'<br>'; // 200
         //echo $response->getHeaderLine('content-type').'<br>'; // 'application/json; charset=utf8'
