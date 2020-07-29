@@ -1,0 +1,235 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The xdebug extension is not loaded
+
+[Info  - 12:09:00 AM] 6048 files total
+[Info  - 12:09:00 AM] Indexing project for definitions and static references
+Parsing file:///home/sean/workspace/laravel/bootstrap/cache/packages.php
+Parsing file:///home/sean/workspace/laravel/bootstrap/cache/services.php
+Parsing file:///home/sean/workspace/laravel/bootstrap/app.php
+Parsing file:///home/sean/workspace/laravel/config/hashing.php
+Parsing file:///home/sean/workspace/laravel/config/queue.php
+Parsing file:///home/sean/workspace/laravel/config/database.php
+Parsing file:///home/sean/workspace/laravel/config/filesystems.php
+Parsing file:///home/sean/workspace/laravel/config/mail.php
+Parsing file:///home/sean/workspace/laravel/config/broadcasting.php
+Parsing file:///home/sean/workspace/laravel/config/services.php
+Parsing file:///home/sean/workspace/laravel/config/app.php
+Parsing file:///home/sean/workspace/laravel/config/session.php
+Parsing file:///home/sean/workspace/laravel/config/cache.php
+Parsing file:///home/sean/workspace/laravel/config/auth.php
+Parsing file:///home/sean/workspace/laravel/config/logging.php
+Parsing file:///home/sean/workspace/laravel/config/view.php
+Parsing file:///home/sean/workspace/laravel/config/cors.php
+Parsing file:///home/sean/workspace/laravel/app/Exceptions/Handler.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/EncryptCookies.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrustHosts.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrimStrings.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/CheckForMaintenanceMode.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/RedirectIfAuthenticated.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/VerifyCsrfToken.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrustProxies.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/Authenticate.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Controllers/Controller.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Kernel.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/BroadcastServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/AuthServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/AppServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/RouteServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/EventServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/User.php
+Parsing file:///home/sean/workspace/laravel/app/Console/Kernel.php
+Parsing file:///home/sean/workspace/laravel/tests/TestCase.php
+Parsing file:///home/sean/workspace/laravel/tests/Feature/ExampleTest.php
+Parsing file:///home/sean/workspace/laravel/tests/Unit/ExampleTest.php
+Parsing file:///home/sean/workspace/laravel/tests/CreatesApplication.php
+Parsing file:///home/sean/workspace/laravel/vendor/autoload.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_namespaces.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/ClassLoader.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_files.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_static.php
+[Info  - 12:09:00 AM] Ignoring file file:///home/sean/workspace/laravel/vendor/composer/autoload_static.php because it exceeds size limit of 150000 bytes (602659)
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_classmap.php
+[Info  - 12:09:00 AM] Ignoring file file:///home/sean/workspace/laravel/vendor/composer/autoload_classmap.php because it exceeds size limit of 150000 bytes (545971)
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_real.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_psr4.php
+Parsing file:///home/sean/workspace/laravel/routes/web.php
+Parsing file:///home/sean/workspace/laravel/routes/api.php
+Parsing file:///home/sean/workspace/laravel/routes/channels.php
+Parsing file:///home/sean/workspace/laravel/routes/console.php
+Parsing file:///home/sean/workspace/laravel/resources/views/welcome.blade.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/passwords.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/validation.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/pagination.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/auth.php
+Parsing file:///home/sean/workspace/laravel/database/seeds/DatabaseSeeder.php
+Parsing file:///home/sean/workspace/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+Parsing file:///home/sean/workspace/laravel/database/migrations/2014_10_12_000000_create_users_table.php
+Parsing file:///home/sean/workspace/laravel/database/factories/UserFactory.php
+Parsing file:///home/sean/workspace/laravel/storage/framework/views/b256996e3ce6817cf691de850b046ba26b2f9411.php
+Parsing file:///home/sean/workspace/laravel/public/index.php
+Parsing file:///home/sean/workspace/laravel/server.php
+[Info  - 12:09:00 AM] Indexing project for dynamic references
+Parsing file:///home/sean/workspace/laravel/bootstrap/cache/packages.php
+Parsing file:///home/sean/workspace/laravel/bootstrap/cache/services.php
+Parsing file:///home/sean/workspace/laravel/bootstrap/app.php
+Parsing file:///home/sean/workspace/laravel/config/hashing.php
+Parsing file:///home/sean/workspace/laravel/config/queue.php
+Parsing file:///home/sean/workspace/laravel/config/database.php
+Parsing file:///home/sean/workspace/laravel/config/filesystems.php
+Parsing file:///home/sean/workspace/laravel/config/mail.php
+Parsing file:///home/sean/workspace/laravel/config/broadcasting.php
+Parsing file:///home/sean/workspace/laravel/config/services.php
+Parsing file:///home/sean/workspace/laravel/config/app.php
+Parsing file:///home/sean/workspace/laravel/config/session.php
+Parsing file:///home/sean/workspace/laravel/config/cache.php
+Parsing file:///home/sean/workspace/laravel/config/auth.php
+Parsing file:///home/sean/workspace/laravel/config/logging.php
+Parsing file:///home/sean/workspace/laravel/config/view.php
+Parsing file:///home/sean/workspace/laravel/config/cors.php
+Parsing file:///home/sean/workspace/laravel/app/Exceptions/Handler.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/EncryptCookies.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrustHosts.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrimStrings.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/CheckForMaintenanceMode.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/RedirectIfAuthenticated.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/VerifyCsrfToken.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/TrustProxies.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Middleware/Authenticate.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Controllers/Controller.php
+Parsing file:///home/sean/workspace/laravel/app/Http/Kernel.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/BroadcastServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/AuthServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/AppServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/RouteServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/Providers/EventServiceProvider.php
+Parsing file:///home/sean/workspace/laravel/app/User.php
+Parsing file:///home/sean/workspace/laravel/app/Console/Kernel.php
+Parsing file:///home/sean/workspace/laravel/tests/TestCase.php
+Parsing file:///home/sean/workspace/laravel/tests/Feature/ExampleTest.php
+Parsing file:///home/sean/workspace/laravel/tests/Unit/ExampleTest.php
+Parsing file:///home/sean/workspace/laravel/tests/CreatesApplication.php
+Parsing file:///home/sean/workspace/laravel/vendor/autoload.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_namespaces.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/ClassLoader.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_files.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_static.php
+[Info  - 12:09:00 AM] Ignoring file file:///home/sean/workspace/laravel/vendor/composer/autoload_static.php because it exceeds size limit of 150000 bytes (602659)
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_classmap.php
+[Info  - 12:09:00 AM] Ignoring file file:///home/sean/workspace/laravel/vendor/composer/autoload_classmap.php because it exceeds size limit of 150000 bytes (545971)
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_real.php
+Parsing file:///home/sean/workspace/laravel/vendor/composer/autoload_psr4.php
+Parsing file:///home/sean/workspace/laravel/routes/web.php
+Parsing file:///home/sean/workspace/laravel/routes/api.php
+Parsing file:///home/sean/workspace/laravel/routes/channels.php
+Parsing file:///home/sean/workspace/laravel/routes/console.php
+Parsing file:///home/sean/workspace/laravel/resources/views/welcome.blade.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/passwords.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/validation.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/pagination.php
+Parsing file:///home/sean/workspace/laravel/resources/lang/en/auth.php
+Parsing file:///home/sean/workspace/laravel/database/seeds/DatabaseSeeder.php
+Parsing file:///home/sean/workspace/laravel/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+Parsing file:///home/sean/workspace/laravel/database/migrations/2014_10_12_000000_create_users_table.php
+Parsing file:///home/sean/workspace/laravel/database/factories/UserFactory.php
+Parsing file:///home/sean/workspace/laravel/storage/framework/views/b256996e3ce6817cf691de850b046ba26b2f9411.php
+Parsing file:///home/sean/workspace/laravel/public/index.php
+Parsing file:///home/sean/workspace/laravel/server.php
+[Info  - 12:09:01 AM] 97 Packages
+[Info  - 12:09:01 AM] Restored swiftmailer/swiftmailer:6.2.3 from cache
+[Info  - 12:09:01 AM] Restored mockery/mockery:1.3.2 from cache
+[Info  - 12:09:01 AM] Restored monolog/monolog:2.1.0 from cache
+[Info  - 12:09:01 AM] Restored league/flysystem:1.0.69 from cache
+[Info  - 12:09:01 AM] Restored league/commonmark:1.5.1 from cache
+[Info  - 12:09:01 AM] Restored phpspec/prophecy:1.11.1 from cache
+[Info  - 12:09:01 AM] Restored sebastian/type:1.1.3 from cache
+[Info  - 12:09:01 AM] Restored sebastian/code-unit-reverse-lookup:1.0.1 from cache
+[Info  - 12:09:01 AM] Restored sebastian/exporter:3.1.2 from cache
+[Info  - 12:09:01 AM] Restored sebastian/recursion-context:3.0.0 from cache
+[Info  - 12:09:01 AM] Restored sebastian/environment:4.2.3 from cache
+[Info  - 12:09:01 AM] Restored sebastian/object-enumerator:3.0.3 from cache
+[Info  - 12:09:01 AM] Restored sebastian/global-state:3.0.0 from cache
+[Info  - 12:09:01 AM] Restored sebastian/object-reflector:1.1.1 from cache
+[Info  - 12:09:01 AM] Restored sebastian/comparator:3.0.2 from cache
+[Info  - 12:09:01 AM] Restored sebastian/diff:3.0.2 from cache
+[Info  - 12:09:01 AM] Restored sebastian/version:2.0.1 from cache
+[Info  - 12:09:01 AM] Restored sebastian/resource-operations:2.0.1 from cache
+[Info  - 12:09:01 AM] Restored phpunit/php-code-coverage:7.0.10 from cache
+[Info  - 12:09:01 AM] Restored phpunit/php-text-template:1.2.1 from cache
+[Info  - 12:09:01 AM] Restored phpunit/php-file-iterator:2.0.2 from cache
+[Info  - 12:09:01 AM] Restored phpunit/phpunit:8.5.8 from cache
+[Info  - 12:09:01 AM] Restored phpunit/php-timer:2.1.2 from cache
+[Info  - 12:09:01 AM] Restored phpunit/php-token-stream:3.1.1 from cache
+[Info  - 12:09:01 AM] Restored psr/http-message:1.0.1 from cache
+[Info  - 12:09:01 AM] Restored psr/container:1.0.0 from cache
+[Info  - 12:09:01 AM] Restored psr/log:1.1.3 from cache
+[Info  - 12:09:01 AM] Restored psr/simple-cache:1.0.1 from cache
+[Info  - 12:09:01 AM] Restored psr/event-dispatcher:1.0.0 from cache
+[Info  - 12:09:01 AM] Restored fruitcake/laravel-cors:1.0.6 from cache
+[Info  - 12:09:01 AM] Restored webmozart/assert:1.9.1 from cache
+[Info  - 12:09:01 AM] Restored guzzlehttp/promises:1.3.1 from cache
+[Info  - 12:09:02 AM] Restored guzzlehttp/psr7:1.6.1 from cache
+[Info  - 12:09:02 AM] Restored guzzlehttp/guzzle:6.5.5 from cache
+[Info  - 12:09:02 AM] Restored tijsverkoyen/css-to-inline-styles:2.2.2 from cache
+[Info  - 12:09:02 AM] Restored facade/flare-client-php:1.3.2 from cache
+[Info  - 12:09:02 AM] Restored facade/ignition-contracts:1.0.0 from cache
+[Info  - 12:09:02 AM] Restored facade/ignition:2.0.7 from cache
+[Info  - 12:09:02 AM] Restored nesbot/carbon:2.36.1 from cache
+[Info  - 12:09:02 AM] Restored hamcrest/hamcrest-php:2.0.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-intl-idn:1.17.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/http-foundation:5.1.2 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-php72:1.17.0 from cache
+[Info  - 12:09:02 AM] Restored symfony/error-handler:5.1.2 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-php80:1.17.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-ctype:1.17.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-intl-normalizer:1.17.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/string:5.1.2 from cache
+[Info  - 12:09:02 AM] Restored symfony/process:5.1.2 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-php73:1.17.1 from cache
+[Info  - 12:09:02 AM] Restored symfony/event-dispatcher-contracts:2.1.3 from cache
+[Info  - 12:09:02 AM] Restored symfony/css-selector:5.1.2 from cache
+[Info  - 12:09:02 AM] Restored symfony/polyfill-intl-grapheme:1.17.1 from cache
+[Info  - 12:09:03 AM] Restored symfony/deprecation-contracts:2.1.3 from cache
+[Info  - 12:09:03 AM] Restored symfony/http-kernel:5.1.2 from cache
+[Info  - 12:09:03 AM] Restored symfony/translation:5.1.2 from cache
+[Info  - 12:09:03 AM] Restored symfony/console:5.1.2 from cache
+[Info  - 12:09:03 AM] Restored symfony/routing:5.1.2 from cache
+[Info  - 12:09:04 AM] Restored symfony/var-dumper:5.1.2 from cache
+[Info  - 12:09:04 AM] Restored symfony/finder:5.1.2 from cache
+[Info  - 12:09:04 AM] Restored symfony/service-contracts:2.1.3 from cache
+[Info  - 12:09:04 AM] Restored symfony/polyfill-iconv:1.17.1 from cache
+[Info  - 12:09:04 AM] Restored symfony/event-dispatcher:5.1.2 from cache
+[Info  - 12:09:04 AM] Restored symfony/translation-contracts:2.1.3 from cache
+[Info  - 12:09:04 AM] Restored symfony/polyfill-mbstring:1.17.1 from cache
+[Info  - 12:09:04 AM] Restored symfony/mime:5.1.2 from cache
+[Info  - 12:09:04 AM] Restored voku/portable-ascii:1.5.2 from cache
+[Info  - 12:09:04 AM] Restored theseer/tokenizer:1.1.3 from cache
+[Info  - 12:09:04 AM] Restored filp/whoops:2.7.3 from cache
+[Info  - 12:09:04 AM] Restored asm89/stack-cors:1.3.0 from cache
+[Info  - 12:09:04 AM] Restored nunomaduro/collision:4.2.0 from cache
+[Info  - 12:09:04 AM] Restored opis/closure:3.5.5 from cache
+[Info  - 12:09:07 AM] Restored egulias/email-validator:2.1.18 from cache
+[Info  - 12:09:07 AM] Restored laravel/framework:7.19.0 from cache
+[Info  - 12:09:07 AM] Restored laravel/tinker:2.4.1 from cache
+[Info  - 12:09:07 AM] Restored doctrine/instantiator:1.3.1 from cache
+[Info  - 12:09:07 AM] Restored doctrine/inflector:2.0.3 from cache
+[Info  - 12:09:07 AM] Restored doctrine/lexer:1.2.1 from cache
+[Info  - 12:09:07 AM] Restored phar-io/manifest:1.0.3 from cache
+[Info  - 12:09:07 AM] Restored phar-io/version:2.0.1 from cache
+[Info  - 12:09:07 AM] Restored dnoegel/php-xdg-base-dir:0.1.1 from cache
+[Info  - 12:09:07 AM] Restored vlucas/phpdotenv:4.1.7 from cache
+[Info  - 12:09:07 AM] Restored fzaninotto/faker:1.9.1 from cache
+[Info  - 12:09:07 AM] Restored brick/math:0.8.15 from cache
+[Info  - 12:09:07 AM] Restored myclabs/deep-copy:1.10.1 from cache
+[Info  - 12:09:07 AM] Restored dragonmantank/cron-expression:2.3.0 from cache
+[Info  - 12:09:07 AM] Restored ramsey/uuid:4.0.1 from cache
+[Info  - 12:09:07 AM] Restored ramsey/collection:1.0.1 from cache
+[Info  - 12:09:07 AM] Restored psy/psysh:0.10.4 from cache
+[Info  - 12:09:08 AM] Restored scrivo/highlight.php:9.18.1.1 from cache
+[Info  - 12:09:08 AM] Restored phpdocumentor/reflection-docblock:5.1.0 from cache
+[Info  - 12:09:08 AM] Restored phpdocumentor/reflection-common:2.2.0 from cache
+[Info  - 12:09:08 AM] Restored phpdocumentor/type-resolver:1.3.0 from cache
+[Info  - 12:09:08 AM] Restored nikic/php-parser:4.6.0 from cache
+[Info  - 12:09:08 AM] Restored ralouphie/getallheaders:3.0.3 from cache
+[Info  - 12:09:08 AM] Restored fideloper/proxy:4.4.0 from cache
+[Info  - 12:09:08 AM] Restored phpoption/phpoption:1.7.4 from cache
+[Info  - 12:09:08 AM] All 6048 PHP files parsed in 8 seconds. 420 MiB allocated.
