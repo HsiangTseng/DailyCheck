@@ -25,6 +25,7 @@ class UserController extends Controller
 
         $stock = DB::table('stock')->where('user_id', $user_id)->first();
         $stock_list = $stock->stock_list;
+        //return $stock_list;
 
         if($user > 0){
             $data = 

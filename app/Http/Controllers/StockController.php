@@ -13,11 +13,32 @@ class StockController extends Controller
      */
     public function index()
     {
-        $stock_number = $_POST['stock_number'];
-        $stock_code = 'tse_'.$stock_number.'.tw_'.date("Ymd");
+        $stock_array = $_POST['stock_number'];
+        $stock_code = '';
+        $test_stock_code = '';
+        if(count($stock_array) == 1)// if only post 1 stock
+        {
+            $stock_code = 'tse_'.$stock_array[0].'.tw_'.date("Ymd");
+            $test_stock_code = 'tse_'.$stock_array[0].'.tw_20200731';
+        }
+
+        else if(count($stock_array)>1)//if post more than 1 stock
+        {
+            $stock_code = 'tse_'.$stock_array[0].'.tw_'.date("Ymd");
+            $test_stock_code= 'tse_'.$stock_array[0].'.tw_20200731';
+
+            foreach ($stock_array as $key => $value) {
+                if($key > 0)
+                {
+                    $stock_code = $stock_code.'|tse_'.$stock_array[$key].'.tw_'.date("Ymd");
+                    $test_stock_code = $test_stock_code.'|tse_'.$stock_array[$key].'.tw_20200731';
+                }
+            }
+        }
+            
         $client = new \GuzzleHttp\Client();
         //Stock URL ==>> 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw_20200729&_=CURRENT_TIME'
-        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch='.$stock_code.'&_=CURRENT_TIME',['verify' => false]);
+        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch='.$test_stock_code.'&_=CURRENT_TIME',['verify' => false]);
 
         //echo $response->getStatusCode().'<br>'; // 200
         //echo $response->getHeaderLine('content-type').'<br>'; // 'application/json; charset=utf8'
@@ -29,10 +50,23 @@ class StockController extends Controller
 
 
         //echo $json_output['msgArray'][0]['z'];//'z' means stock price right now.
-        $price = $json_output['msgArray'][0]['z'];
-        return $price;
-        //return Response::json(array('price' => $price));
-
+        if(count($stock_array)==1)
+        {
+            $price = $json_output['msgArray'][0]['z'];
+            return $price;
+        }
+        else if(count($stock_array)>1)
+        {
+            $price = $json_output['msgArray'][0]['z'];
+            foreach($stock_array as $key => $value)
+            {
+                if($key > 0)
+                {
+                    $price = $price.'-'.$json_output['msgArray'][$key]['z'];
+                }
+            }
+            return $price;
+        }
     }
 
     /**

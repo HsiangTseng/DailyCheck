@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 });
 
-Route::get('/Home', function () {
+Route::post('/Home', function () {
     return view('dashboard.frontend.Home');
 });
 
