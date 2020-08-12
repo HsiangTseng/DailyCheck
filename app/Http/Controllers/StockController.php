@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+// This Controller let the front-end can get the stock's data (ex : stock's name , stock's price)
 class StockController extends Controller
 {
     /**
@@ -11,7 +13,7 @@ class StockController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getPrice()
     {
         $stock_array = $_POST['stock_number'];
         $stock_code = '';
@@ -38,7 +40,7 @@ class StockController extends Controller
             
         $client = new \GuzzleHttp\Client();
         //Stock URL ==>> 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw_20200729&_=CURRENT_TIME'
-        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch='.$test_stock_code.'&_=CURRENT_TIME',['verify' => false]);
+        $response = $client->request('GET', 'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch='.$stock_code.'&_=CURRENT_TIME',['verify' => false]);
 
         //echo $response->getStatusCode().'<br>'; // 200
         //echo $response->getHeaderLine('content-type').'<br>'; // 'application/json; charset=utf8'

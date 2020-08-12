@@ -49,7 +49,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>{{$User ?? 'NoOne'}}</h2>
+                <h2>{{$User}}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -192,76 +192,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
-          <div class="row" style="display: inline-block;" >
-          <div class="tile_count">
-            <?php
-              $front_end_stock = $Stock;
-              $front_end_stock_array = explode("-",$front_end_stock);
-              foreach($front_end_stock_array as $key => $value)
-              {
-                echo '<div class="col-md-4 col-sm-4  tile_stats_count">';
-                  echo '<span id = "stock_'.$key.'_number" class="count_top"><i class="fa fa-line-chart"></i> Stock '.$value.'</span>';
-                  echo '<div id= "stock_'.$key.'_price" class="count">CountingPirce</div>';
-                echo '</div>';
-              }
-              //var stock_array = stock_list.split("-");
-            ?>
 
-            <!--
-            <div class="col-md-4 col-sm-4  tile_stats_count">
-              <span id = "stock_1_number" class="count_top"><i class="fa fa-line-chart"></i> Stock 2330</span>
-              <div id= "stock_1_price" class="count">25000000</div>
-              <span class="count_bottom"><i class="green">4% </i> Now Price</span>
-            </div>
-            <div class="col-md-4 col-sm-4  tile_stats_count">
-              <span id = "stock_1_number" class="count_top"><i class="fa fa-line-chart"></i> Stock 2330</span>
-              <div id= "stock_1_price" class="count">250000000</div>
-              <span class="count_bottom"><i class="green">4% </i> Now Price</span>
-            </div>
-            <div class="col-md-4 col-sm-4  tile_stats_count">
-                <span id = "stock_1_number" class="count_top"><i class="fa fa-line-chart"></i> Stock 2330</span>
-                <div id= "stock_1_price" class="count">250000000</div>
-                <span class="count_bottom"><i class="green">4% </i> Now Price</span>
-            </div>
-            -->
-
-          </div>
-          </div>
-        <script>
-            var stock_list = '{{$Stock ?? '2330'}}';
-            var stock_array = stock_list.split("-");
-            var refresh_interval = 20000;
-
-            function getPrice(){
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-                });
-            $.ajax({
-                    type:"POST",
-                    url:'/PostGetPrice',
-                    data:{stock_number:stock_array},
-                    success:function(stock_price){
-                            //alert(stock_price);
-                            var stock_array = stock_price.split("-");
-                            for (var i = 0 ; i < stock_array.length ; i++)
-                            {
-                              var id = "stock_"+i+"_price";
-                              document.getElementById(id).innerHTML= stock_array[i];
-                            }
-                            //document.getElementById("stock_1_price").innerHTML= stock_price;
-                    },
-                    error:function(){ 
-                        alert("Get Stock Price API ERROR");
-                    },
-                    complete: function () {
-                        setTimeout(getPrice, refresh_interval);//If call ajax complete, call function again per interval.
-                    }
-                  })
-            }
-            setTimeout(getPrice, "1000");//First time call ajax.
-        </script>
           <!-- /top tiles -->
           <br />
 

@@ -27,20 +27,27 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form action="/check_login" method="post">
+            <form action="/Login" method="post">
               @csrf
               <h1>Start DailyView</h1>
               <div>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Username" required="" />
+                <input type="text" id="account" name="account" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
                 <input type="text" id="password" name="password" class="form-control" placeholder="Password" required="" />
               </div>
+              <?php
+                $error_code = session()->get('id');
+                if(!empty($error_code))
+                {
+                  echo '<p style="color:red;">'.$error_code.'</p>';
+                }
+                
+              ?>
               <div>
-                <input type="submit" name="button" class="btn btn-default" value="登入" />
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <input type="submit" name="button" class="btn btn-success" value="登入" />
+                <input type="button" onclick="location.href='/Register';" class="btn btn-success" value="註冊" />
               </div>
-
               <div class="clearfix"></div>
 
               <div class="separator">
