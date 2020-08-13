@@ -22,7 +22,7 @@ Route::match(['post','get'], '/Home', function () {
     return view('dashboard.frontend.Home');
 })->name('Home');
 
-Route::get('/workspace', function () {
+Route::match(['post','get'],'/Workspace', function () {
     return view('dashboard.frontend.workspace');
 })->name('Workspace');
 
@@ -30,15 +30,15 @@ Route::get('/workspace', function () {
 //-------------About account like Login or Register-------------
 Route::get('/Login', function () {
     return view('dashboard.frontend.login');
-});
+})->name('Login');
 
-Route::post('/Login', 'UserController@check_account');
+Route::post('/Login', 'UserController@loginProcess');
 
 Route::get('/Register', function () {
     return view('dashboard.frontend.Register');
 });
 
-Route::post('/Register', 'UserController@register');
+Route::post('/Register', 'UserController@registerProcess');
 
 
 Route::get('/WrongUser', function () {

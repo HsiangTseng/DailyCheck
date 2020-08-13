@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Validator;
 use Hash;
 use App\MyDB\UserModel;
+use App\MyDB\StockModel;
+
+
 
 class UserController extends Controller
 {
@@ -16,8 +19,71 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function check_account()
+    public function loginProcess()
     {
+        $input = request()->all();
+        $rules = [
+            'account'=>[
+                'required',
+                'max:30',
+                'min:6',
+            ],
+
+            'password'=>[
+                'required',
+                'min:6',
+            ],
+        ];
+        $validator = Validator::make($input, $rules);
+        if($validator->fails())
+        {
+            return redirect('/Login')
+            ->withErrors($validator)
+            ->withInput();
+            //withInput let the blade.php can use old data, like {{ old('account') }}
+        }
+
+        $check_user_exist = UserModel::where('account', $input['account'])->count();
+
+        if($check_user_exist){
+            $User = UserModel::where('account', $input['account'])->firstOrFail();
+            $pwd_correct = Hash::check($input['password'], $User->password);
+
+
+            if(!$pwd_correct){
+                $error_msg = [
+                    'msg' => [
+                        '密碼錯誤',
+                    ],
+                ];
+                return redirect()->back()->withErrors($error_msg)->withInput();
+            }
+        }
+        else{
+            $error_msg = [
+                'msg' => [
+                    '查無此帳號',
+                ],
+            ];
+            return redirect()->back()->withErrors($error_msg)->withInput();
+        }
+
+        //IF USER RIGHT, PASS THE DATA
+        $user_id = $User->id;
+        $Stock = StockModel::where('user_id',$user_id)->first();
+        $data =
+        [
+            'User' => $input['account'],
+            'Stock' => $Stock->stock_list,
+        ];
+        return redirect('Workspace')
+        ->with([
+            'User' => $input['account'],
+            'Stock' => $Stock->stock_list,
+            ]);
+        
+        
+        /*
         $account = $_POST['account'];
         $pwd = $_POST['password'];
 
@@ -40,11 +106,10 @@ class UserController extends Controller
             //return redirect()->route('WrongUser');
             $error_msg = 'No PWD';
             return redirect()->back()->with(['id' => $error_msg]);
-
-        }
+        }*/
     }
 
-    public function register()
+    public function registerProcess()
     {
         //GET ALL DATA
         $input = request()->all();
@@ -93,72 +158,12 @@ class UserController extends Controller
         //Create in db
         $Users = UserModel::create($input);
         
+        return redirect('Login')->with([
+            'registered' => '1',
+        ]);
+ 
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

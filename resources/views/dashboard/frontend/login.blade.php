@@ -31,23 +31,31 @@
               @csrf
               <h1>Start DailyView</h1>
               <div>
-                <input type="text" id="account" name="account" class="form-control" placeholder="Username" required="" />
+                <input type="text" id="account" name="account" class="form-control" placeholder="Username" value="{{ old('account') }}" required="" />
               </div>
               <div>
-                <input type="text" id="password" name="password" class="form-control" placeholder="Password" required="" />
+                <input type="text" id="password" name="password" class="form-control" placeholder="Password" value="{{ old('password') }}" required="" />
               </div>
-              <?php
-                $error_code = session()->get('id');
-                if(!empty($error_code))
-                {
-                  echo '<p style="color:red;">'.$error_code.'</p>';
-                }
-                
-              ?>
+
               <div>
                 <input type="submit" name="button" class="btn btn-success" value="登入" />
                 <input type="button" onclick="location.href='/Register';" class="btn btn-success" value="註冊" />
               </div>
+
+              {{-- IF Login valid error --}}
+              @if($errors AND count($errors))
+											<ul>
+												@foreach ($errors->all() as $err)
+													<p style="color:red;">*{{$err}}</p>
+												@endforeach
+											</ul>
+              @endif
+              
+              {{-- IF Register success --}}
+              @if (Session::has('registered'))
+                  <div class="alert alert-success">註冊成功，請重新登入</div>
+              @endif
+              
               <div class="clearfix"></div>
 
               <div class="separator">
