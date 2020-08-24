@@ -71,42 +71,24 @@ class UserController extends Controller
         //IF USER RIGHT, PASS THE DATA
         $user_id = $User->id;
         $Stock = StockModel::where('user_id',$user_id)->first();
+        session()->put('user_account',$input['account']);
+        session()->put('user_id',$user_id);
+        session()->put('user_stock_list',$Stock->stock_list);
+        //I use session to pass the user account and stock_list, make sure the data will keep when user do F5 in browser
+
         $data =
         [
             'User' => $input['account'],
+            'User_id' => $user_id,
             'Stock' => $Stock->stock_list,
         ];
-        return redirect('Workspace')
+        return redirect('Home')
         ->with([
             'User' => $input['account'],
+            'User_id' => $user_id,
             'Stock' => $Stock->stock_list,
             ]);
         
-        
-        /*
-        $account = $_POST['account'];
-        $pwd = $_POST['password'];
-
-        $user_exist = DB::table('users')->where('account', $account)->where('password', $pwd)->count();
-
-        //User exist.
-        if($user_exist){
-            $user_id = DB::table('users')->where('account', $account)->pluck('id');
-            $stock = DB::table('stock')->where('user_id', $user_id)->first();
-            $stock_list = $stock->stock_list;
-            $data = 
-            [
-                'User' => $account,
-                'Stock' => $stock_list
-            ];
-            return view('dashboard.frontend.Home')->with($data);
-        }
-        //User NOT exist.
-        else{
-            //return redirect()->route('WrongUser');
-            $error_msg = 'No PWD';
-            return redirect()->back()->with(['id' => $error_msg]);
-        }*/
     }
 
     public function registerProcess()

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard.frontend.index');
+    return view('dashboard.frontend.new_index');
 
 });
 
@@ -25,6 +25,13 @@ Route::match(['post','get'], '/Home', function () {
 Route::match(['post','get'],'/Workspace', function () {
     return view('dashboard.frontend.workspace');
 })->name('Workspace');
+
+Route::get('/EditStock', function () {
+    return view('dashboard.frontend.EditStock');
+})->name('EditStock');
+
+Route::post('/EditStock', 'StockController@editStockList');
+
 
 
 //-------------About account like Login or Register-------------
@@ -51,4 +58,6 @@ Route::get('/WrongUser', function () {
 
 //-------------Function or Ajax-------------
 Route::post('/PostGetPrice', 'StockController@getPrice');
+Route::post('/PostGetName', 'StockController@getName');
+
 

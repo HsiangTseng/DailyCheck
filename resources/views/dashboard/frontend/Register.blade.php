@@ -237,9 +237,8 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
-												<button class="btn btn-primary" type="reset">Reset</button>
-												<button type="submit" class="btn btn-success">Submi1414t</button>
+												<button class="btn btn-primary" type="reset">重填</button>
+												<button type="submit" class="btn btn-success">註冊</button>
 											</div>
 										</div>
 

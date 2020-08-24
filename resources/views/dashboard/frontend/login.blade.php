@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+  Session::forget('user_account');
+  Session::forget('user_stock_list');
+?>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,7 +38,7 @@
                 <input type="text" id="account" name="account" class="form-control" placeholder="Username" value="{{ old('account') }}" required="" />
               </div>
               <div>
-                <input type="text" id="password" name="password" class="form-control" placeholder="Password" value="{{ old('password') }}" required="" />
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" value="{{ old('password') }}" required="" />
               </div>
 
               <div>
